@@ -26,7 +26,13 @@ export class TeamForm extends Component {
       >
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" value={this.state.name} />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={this.state.name}
+            onChange={() => {}}
+          />
         </div>
         <button>speichern</button>
       </form>

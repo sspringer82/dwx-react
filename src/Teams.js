@@ -28,6 +28,12 @@ export class Teams extends Component {
     Promise.resolve(teams).then(teams => {
       this.setState({ teams });
     });
+
+    /* READ
+    fetch('/teams').then(response => response.json()).then((teams) => {
+      this.setState({teams});
+    })
+    */
   }
 
   // binding über arrow functions
@@ -41,6 +47,20 @@ export class Teams extends Component {
   }
 
   handleSubmit(team) {
+    /*fetch('/teams', {
+      type: 'POST',
+      body: team,
+      json: true,
+    })
+      .then(response => response.json)
+      .then(newTeam => {
+        this.setState(prevState => {
+          const teamsClone = [...prevState.teams];
+          teamsClone.push(newTeam);
+          return { teams: teamsClone };
+        });
+      });*/
+
     this.setState(prevState => {
       const teamsClone = [...prevState.teams];
       teamsClone.push(team);
