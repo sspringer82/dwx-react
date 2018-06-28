@@ -8,7 +8,10 @@ import { Matches } from './Matches';
 import { TeamsContainer } from './Teams.container';
 import { teams } from './team.reducer';
 
-const store = createStore(combineReducers({ teams }));
+const store = createStore(
+  combineReducers({ teams }),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 class App extends Component {
   render() {
