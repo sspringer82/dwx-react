@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Teams />
+        <Teams groupName="F" />
         <hr />
         <Matches />
       </div>
