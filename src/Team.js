@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const Team = props => {
+export const Team = ({ name, group }) => {
   return (
     <div>
-      <h1>{props.name}</h1>
-      <div>{props.group}</div>
+      <h1>{name}</h1>
+      <div>{group}</div>
     </div>
   );
 };
