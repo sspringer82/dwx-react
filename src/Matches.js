@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Match } from './Match';
 import { MatchForm } from './MatchForm';
+import { Link, Redirect } from 'react-router-dom';
 
 export class Matches extends Component {
   state = {
@@ -39,12 +40,18 @@ export class Matches extends Component {
   }
 
   render() {
+    //return <Redirect to="/" />;
+
+    //console.log(this.props.match.params.team);
+
     return (
       <div>
         {this.state.matches.map(match => (
           <Match key={match.date + match.teamA} {...match} />
         ))}
         <MatchForm onSubmit={match => this.handleSubmit(match)} />
+
+        <Link to="/">Teams</Link>
       </div>
     );
   }

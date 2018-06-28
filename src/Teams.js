@@ -2,6 +2,9 @@ import React from 'react';
 import { Team } from './Team';
 import { PropTypes } from 'prop-types';
 import { TeamForm } from './TeamForm';
+import { Link } from 'react-router-dom';
+import { Children } from './Children';
+import { Matches } from './Matches';
 
 export const Teams = ({ teams, addTeam, removeTeam }) => {
   return (
@@ -20,6 +23,12 @@ export const Teams = ({ teams, addTeam, removeTeam }) => {
           addTeam(team);
         }}
       />
+
+      <Link to="/matches/Deutschland">Matches</Link>
+
+      <Children>
+        <Matches />
+      </Children>
     </div>
   );
 };
