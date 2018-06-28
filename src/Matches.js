@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Match } from './Match';
+import { MatchForm } from './MatchForm';
 
 export class Matches extends Component {
   state = {
@@ -29,12 +30,21 @@ export class Matches extends Component {
     });
   }
 
+  handleSubmit(match) {
+    this.setState(prevState => {
+      const matchesClone = [...prevState.matches];
+      matchesClone.push(match);
+      return { matches: matchesClone };
+    });
+  }
+
   render() {
     return (
       <div>
         {this.state.matches.map(match => (
           <Match key={match.date + match.teamA} {...match} />
         ))}
+        <MatchForm onSubmit={match => this.handleSubmit(match)} />
       </div>
     );
   }

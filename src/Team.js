@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Headline } from './styles';
 
 export const Team = ({ name, group = 'F', onDelete }) => {
-  const color = 'blue';
   const className = 'team';
 
   return (

@@ -27,7 +27,6 @@ export class TeamForm extends Component {
         <div>
           <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" value={this.state.name} />
-          <input type="text" name="group" id="group" value={this.state.group} />
         </div>
         <button>speichern</button>
       </form>
