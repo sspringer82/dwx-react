@@ -33,8 +33,8 @@ export class Teams extends Component {
   //handleDelete = team => {
   handleDelete(team) {
     this.setState(prevState => {
-      const teams = [...prevState.teams];
-      teams.filter(t => t.name !== team.name);
+      const teamsClone = [...prevState.teams];
+      const teams = teamsClone.filter(t => t.name !== team.name);
       return { teams };
     });
   }
