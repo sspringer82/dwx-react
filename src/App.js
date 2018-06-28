@@ -27,7 +27,9 @@ class App extends Component {
         <Team name="Schweden" group="F" />
         <hr />
 
-        {matches.map(match => <Match {...match} />)}
+        {matches.map(match => (
+          <Match key={match.date + match.teamA} {...match} />
+        ))}
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Team = ({ name, group }) => {
   return (
@@ -7,4 +8,9 @@ export const Team = ({ name, group }) => {
       <div>{group}</div>
     </div>
   );
+};
+
+Team.propTypes = {
+  name: PropTypes.string.isRequired,
+  group: PropTypes.string.isRequired,
 };
