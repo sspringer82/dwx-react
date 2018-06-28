@@ -8,4 +8,4 @@ Props:
 - Team A
 - Team B
 - Score A
-- Scroe B
+- Score B
