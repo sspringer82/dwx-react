@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Team = ({ name, group }) => {
+export const Team = ({ name, group = 'F' }) => {
   return (
     <div>
       <h1>{name}</h1>
@@ -12,5 +12,5 @@ export const Team = ({ name, group }) => {
 
 Team.propTypes = {
   name: PropTypes.string.isRequired,
-  group: PropTypes.string.isRequired,
+  group: PropTypes.string,
 };

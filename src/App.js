@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Team } from './Team';
 import { Match } from './Match';
+import { Teams } from './Teams';
 
 class App extends Component {
   render() {
@@ -24,7 +24,7 @@ class App extends Component {
 
     return (
       <div>
-        <Team name="Schweden" group="F" />
+        <Teams />
         <hr />
 
         {matches.map(match => (
