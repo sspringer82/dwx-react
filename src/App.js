@@ -5,7 +5,7 @@ import { createStore, combineReducers } from 'redux';
 
 import './App.css';
 import { Matches } from './Matches';
-import { Teams } from './Teams';
+import { TeamsContainer } from './Teams.container';
 import { teams } from './team.reducer';
 
 const store = createStore(combineReducers({ teams }));
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <Teams groupName="F" />
+          <TeamsContainer />
           <hr />
           <Matches />
         </div>
