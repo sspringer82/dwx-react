@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Team } from './Team';
 import { PropTypes } from 'prop-types';
+import { TeamForm } from './TeamForm';
 
 export class Teams extends Component {
   state = {
@@ -39,6 +40,14 @@ export class Teams extends Component {
     });
   }
 
+  handleSubmit(team) {
+    this.setState(prevState => {
+      const teamsClone = [...prevState.teams];
+      teamsClone.push(team);
+      return { teams: teamsClone };
+    });
+  }
+
   render() {
     return (
       <div>
@@ -51,6 +60,11 @@ export class Teams extends Component {
             onDelete={team => this.handleDelete(team)}
           />
         ))}
+        <TeamForm
+          onSubmit={team => {
+            this.handleSubmit(team);
+          }}
+        />
       </div>
     );
   }
